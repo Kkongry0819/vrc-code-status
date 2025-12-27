@@ -1,0 +1,98 @@
+{
+  "extensionKind": [
+    "ui"
+  ],
+  "name": "vrc-code-status",
+  "displayName": "VRC Code Status",
+  "description": "Show your current VS Code file, language, and diagnostics in VRChat via OSC Chatbox (supports custom templates & UTF-8).",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.107.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "Athley.helloWorld",
+        "title": "Hello World"
+      }
+    ],
+    "configuration": {
+      "title": "VRChat OSC",
+      "properties": {
+        "vrcOsc.enabled": {
+          "type": "boolean",
+          "default": true
+        },
+        "vrcOsc.host": {
+          "type": "string",
+          "default": "127.0.0.1"
+        },
+        "vrcOsc.port": {
+          "type": "number",
+          "default": 9000
+        },
+        "vrcOsc.format": {
+          "type": "string",
+          "default": "{file} [{lang}]"
+        },
+        "vrcOsc.sendOnSave": {
+          "type": "boolean",
+          "default": false
+        },
+        "vrcOsc.throttleMs": {
+          "type": "number",
+          "default": 200
+        },
+        "vrcOsc.asciiOnly": {
+          "type": "boolean",
+          "default": true
+        },
+        "vrcOsc.nickname": {
+          "type": "string",
+          "default": "XXX"
+        },
+        "vrcOsc.template": {
+          "type": "string",
+          "default": "{nick}正在Coding {file}\\nproblem({errorsCount}): {errorTop}\\nwarning({warningsCount}): {warningTop}"
+        },
+        "vrcOsc.sendSfx": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "npm run check-types && npm run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "npm run check-types && npm run lint && node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.19.3",
+    "@types/vscode": "^1.107.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
+    "esbuild": "^0.27.1",
+    "eslint": "^9.39.1",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.48.1"
+  }
+}
