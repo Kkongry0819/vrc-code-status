@@ -26,6 +26,13 @@ Note: VRChat Chatbox messages are temporary and will fade out. You can extend th
 
 ---
 
+## 🖼️ Demo
+
+<p align="center">
+  <img src="./demo.png" alt="VRChat Chatbox Demo" width="420" />
+</p>
+---
+
 ## 🚀 Quick Start
 
 1) Enable OSC in VRChat
@@ -81,4 +88,26 @@ Tip: Use \\n in settings to represent a newline.
 - vrcOsc.nickname (string)
 - vrcOsc.template (string)
 - vrcOsc.sendOnSave (boolean)
-- vrcOsc.keepAliveSec
+- vrcOsc.keepAliveSec (number, 0 disables)
+
+---
+
+## 🐧 WSL / Remote Development Notes
+
+If you develop in WSL but run VRChat on Windows, the extension should run on Windows (UI) so that 127.0.0.1:9000 reaches VRChat.
+
+Recommended in package.json:
+"extensionKind": ["ui"]
+
+---
+
+## 🐞 Feedback / Bug Reports
+
+If you find a bug or have a feature request, please open an issue on GitHub.
+Include your VS Code version, extension version, and steps to reproduce if possible.
+
+---
+
+## 📄 License
+
+MIT

@@ -23,7 +23,13 @@
 - 默认静音（不触发提示音）
 
 ---
+## 🖼️ 效果展示
 
+<p align="center">
+  <img src="./demo.png" alt="VRChat Chatbox 效果展示" width="420" />
+</p>
+
+---
 ## 🚀 快速上手
 
 1) VRChat 开启 OSC

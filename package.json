@@ -11,7 +11,7 @@
   "name": "vrc-code-status",
   "displayName": "VRC Code Status",
   "description": "Show your current VS Code file, language, and diagnostics in VRChat via OSC Chatbox (supports custom templates & UTF-8).",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.107.0"
   },

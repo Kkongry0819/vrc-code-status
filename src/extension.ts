@@ -177,7 +177,6 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.languages.onDidChangeDiagnostics((e) => {
       const editor = vscode.window.activeTextEditor;
       if (!editor) {return;}
-
       const active = editor.document.uri.toString();
       const changed = e.uris.some((u) => u.toString() === active);
       if (changed) {
