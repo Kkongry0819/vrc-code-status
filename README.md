@@ -1,6 +1,6 @@
-# VRC Code Status
+# 🎮 VRC Code Status
 
-中文说明: README.zh-CN.md
+🌏 中文说明: [README.zh-CN.md](./README.zh-CN.md)
 
 Show your current VS Code activity (file / language / diagnostics) in VRChat Chatbox via OSC.
 
@@ -8,7 +8,7 @@ Note: VRChat Chatbox messages are temporary and will fade out. You can extend th
 
 ---
 
-## Features
+## ✨ Features
 
 - Send current active file name and language to VRChat Chatbox (/chatbox/input)
 - Diagnostics summary:
@@ -26,16 +26,15 @@ Note: VRChat Chatbox messages are temporary and will fade out. You can extend th
 
 ---
 
-## Quick Start
+## 🚀 Quick Start
 
 1) Enable OSC in VRChat
 - Open VRChat
 - Action Menu -> OSC -> Enabled
 
-2) Install
-- From Marketplace (after publishing), or
-- Install from VSIX:
-  - VS Code -> Extensions -> ... -> Install from VSIX...
+2) Install the extension
+- Install from the Marketplace (Method 1)
+- Download the VSIX from GitHub Releases and install via “Install from VSIX...” (Method 2, not recommended)
 
 3) Configure (recommended)
 - Press Ctrl+Shift+P
@@ -63,7 +62,7 @@ Tip: Use \\n in settings to represent a newline.
 
 ---
 
-## Template Placeholders
+## 🧩 Template Placeholders
 
 - {nick}: nickname
 - {file}: current file name
@@ -73,7 +72,7 @@ Tip: Use \\n in settings to represent a newline.
 
 ---
 
-## Settings
+## ⚙️ Settings
 
 - vrcOsc.enabled (boolean)
 - vrcOsc.host (string)
@@ -82,24 +81,4 @@ Tip: Use \\n in settings to represent a newline.
 - vrcOsc.nickname (string)
 - vrcOsc.template (string)
 - vrcOsc.sendOnSave (boolean)
-- vrcOsc.keepAliveSec (number, 0 disables)
-
----
-
-## WSL / Remote Development Notes
-
-If you develop in WSL but run VRChat on Windows, the extension should run on Windows (UI) so that 127.0.0.1:9000 reaches VRChat.
-
-Recommended in package.json:
-"extensionKind": ["ui"]
-
----
-
-## Feedback / Bug Reports
-
-If you find a bug or have a feature request, please open an issue on GitHub.
-Include your VS Code version, extension version, and steps to reproduce if possible.
-
-## License
-
-MIT
+- vrcOsc.keepAliveSec
