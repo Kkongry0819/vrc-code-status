@@ -31,6 +31,7 @@ Note: VRChat Chatbox messages are temporary and will fade out. You can extend th
 <p align="center">
   <img src="./demo.png" alt="VRChat Chatbox Demo" width="420" />
 </p>
+
 ---
 
 ## 🚀 Quick Start
